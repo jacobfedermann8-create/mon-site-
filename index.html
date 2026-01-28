@@ -4,77 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AKIMBO INVESTISSEMENT SA</title>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  /* Global */
-  body { margin:0; font-family:'Lato',sans-serif; background:#0d0d0d; color:#e0e0e0; }
-  a { text-decoration:none; }
+  /* Reset & Font */
+  body, h1, h2, h3, p, a { margin: 0; padding: 0; }
+  body { font-family: 'Lato', sans-serif; color: #1A1A1A; background: #FFFFFF; line-height: 1.6; }
 
   /* Header */
-  header { background:#111; color:#fff; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
-  header h1 { font-family:'Montserrat',sans-serif; font-size:28px; margin:0; color:#f0f0f0; }
-  nav a { margin-left:25px; color:#fff; font-weight:600; transition:0.3s; }
-  nav a:hover { color:#b0b0b0; }
+  header {
+    background: #FFFFFF;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  header h1 { font-family:'Montserrat', sans-serif; font-size: 26px; font-weight:700; color:#111; }
+  nav a {
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight:700;
+    color:#111;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    transition: 0.25s;
+  }
+  nav a:hover { color: #555; }
 
   /* Hero */
-  .hero { 
-    background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; 
-    height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative; 
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1471&q=80') no-repeat center/cover;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
   }
-  .hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index:0; }
-  .hero-content { position:relative; z-index:1; max-width:900px; animation:fadeInDown 1.2s ease; }
-  .hero h2 { font-family:'Montserrat',sans-serif; font-size:52px; margin-bottom:20px; line-height:1.2; color:#f0f0f0; }
-  .hero p { font-size:20px; line-height:1.6; color:#dcdcdc; margin-bottom:30px; }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.38);
+  }
+  .hero-content {
+    position: relative;
+    max-width: 900px;
+    color: #FFFFFF;
+  }
+  .hero h2 {
+    font-family:'Montserrat',sans-serif;
+    font-size: 48px;
+    font-weight:700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 750px;
+  }
+  .hero .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #FFFFFF;
+    color:#111;
+    font-weight:700;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .hero .btn:hover { background: #F0F0F0; }
 
-  .btn-primary { display:inline-block; padding:14px 28px; font-weight:bold; border-radius:8px; background:#f0f0f0; color:#111827; transition:0.3s; }
-  .btn-primary:hover { opacity:0.85; transform:translateY(-2px); }
+  /* Section Base */
+  .section { padding: 80px 20px; text-align: center; }
+  .section h2 {
+    font-family:'Montserrat', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color:#111;
+  }
+  .section p {
+    font-size: 18px;
+    color:#4A4A4A;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 10px;
+  }
 
-  @keyframes fadeInDown { 0%{opacity:0;transform:translateY(-30px);} 100%{opacity:1;transform:translateY(0);} }
-
-  /* Sections */
-  .section { padding:80px 20px; max-width:1000px; margin:auto; text-align:center; }
-  .section h2 { font-family:'Montserrat',sans-serif; color:#f0f0f0; margin-bottom:40px; }
-  .section p { font-size:18px; line-height:1.8; max-width:800px; margin:auto; color:#dcdcdc; }
-
-  /* Cards About */
-  .cards { display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:40px; }
-  .card { background:#1a1a1a; border-radius:16px; padding:25px; margin:15px; width:280px; box-shadow:0 8px 20px rgba(0,0,0,0.5); transition:0.3s; opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards; }
-  .card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(200,200,200,0.2); }
-  .card h3 { color:#f0f0f0; margin-bottom:10px; font-family:'Montserrat',sans-serif; }
-  .card p { font-size:16px; line-height:1.6; color:#dcdcdc; }
-  .card:nth-child(1){ animation-delay:0.2s; }
-  .card:nth-child(2){ animation-delay:0.4s; }
-  .card:nth-child(3){ animation-delay:0.6s; }
-
-  @keyframes fadeInUp { 0%{opacity:0;transform:translateY(20px);} 100%{opacity:1;transform:translateY(0);} }
-
-  /* Stats */
-  .stats { display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:50px; }
-  .stat { background:#1a1a1a; padding:25px; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.4); margin:10px; width:180px; transition:0.3s; }
-  .stat:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(200,200,200,0.2); }
-  .stat h3 { margin:0; font-size:28px; color:#f0f0f0; }
-  .stat p { margin-top:8px; font-size:16px; color:#dcdcdc; }
-
-  /* Services Preview */
-  .services-preview { display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:60px; }
-  .service-preview { background:#1a1a1a; border-radius:16px; width:280px; margin:15px; box-shadow:0 8px 20px rgba(0,0,0,0.5); transition:0.3s; text-align:left; overflow:hidden; }
-  .service-preview img { width:100%; height:160px; object-fit:cover; border-top-left-radius:16px; border-top-right-radius:16px; }
-  .service-preview h4 { margin:15px; color:#f0f0f0; font-family:'Montserrat',sans-serif; }
-  .service-preview p { margin:0 15px 15px 15px; font-size:14px; line-height:1.5; color:#dcdcdc; }
-  .service-preview .btn { margin:10px 15px 15px 15px; display:inline-block; background:#f0f0f0; color:#111827; padding:10px 20px; border-radius:8px; text-decoration:none; font-size:14px; }
-  .service-preview .btn:hover { opacity:0.85; }
+  /* Services List */
+  .services-list {
+    margin-top: 40px;
+    list-style:none;
+    padding: 0;
+    max-width: 900px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+  }
+  .services-list li {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 15px 0;
+    font-size:18px;
+  }
+  .services-list li strong { color:#111; }
 
   /* Footer */
-  footer { background-color:#111111; color:white; padding:40px 20px; text-align:left; display:flex; justify-content:space-around; flex-wrap:wrap; }
-  footer div { margin:10px; }
-  footer a { color:white; text-decoration:none; }
-  footer a:hover { color:#b0b0b0; }
-
-  @media(max-width:768px){
-    .hero h2 { font-size:36px; }
-    .hero p { font-size:16px; }
-    .stats, .cards, .services-preview, footer { flex-direction:column; align-items:center; text-align:center; }
-    .stat, .card, .service-preview, footer div { width:80%; }
+  footer {
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-top: 1px solid #E0E0E0;
+    text-align: center;
+    font-size: 14px;
+    color:#666;
   }
 </style>
 </head>
@@ -93,83 +136,32 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-content">
-    <h2>Swiss Excellence in Investment Management</h2>
-    <p>AKIMBO INVESTISSEMENT SA, based in Geneva, has been delivering professional asset management, venture capital, real estate, and sponsorship solutions for over 20 years.</p>
-    <a href="contact.html" class="btn-primary">Contact Us</a>
+    <h2>Swiss Investment Excellence & Long‑Term Vision</h2>
+    <p>AKIMBO INVESTISSEMENT SA has been providing tailored investment management, real estate strategies, and financial structuring since 2005.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
   </div>
 </section>
 
-<!-- About / Cards -->
+<!-- About -->
 <section class="section">
-  <h2>Our Expertise</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Asset Management</h3>
-      <p>Comprehensive portfolio optimization with strategic risk management to achieve sustainable growth and protect your assets.</p>
-    </div>
-    <div class="card">
-      <h3>Real Estate</h3>
-      <p>Investing in high-quality properties across Switzerland and Europe for capital appreciation and long-term returns.</p>
-    </div>
-    <div class="card">
-      <h3>Startups & Venture Capital</h3>
-      <p>Providing capital, mentorship, and guidance to innovative startups, ensuring growth and maximizing ROI for investors.</p>
-    </div>
-  </div>
+  <h2>About Us</h2>
+  <p>AKIMBO INVESTISSEMENT SA is a Geneva‑based investment management firm with over 20 years of experience structuring holdings, managing portfolios and advising both private and institutional clients with clarity, discretion and strategic insight.</p>
 </section>
 
-<!-- Stats -->
+<!-- Services -->
 <section class="section">
-  <h2>Key Figures</h2>
-  <div class="stats">
-    <div class="stat"><h3>50+</h3><p>Properties Managed</p></div>
-    <div class="stat"><h3>25+</h3><p>Startups Funded</p></div>
-    <div class="stat"><h3>20M CHF</h3><p>Assets Under Management</p></div>
-  </div>
+  <h2>Our Core Services</h2>
+  <p>We offer a structured approach to global investment needs:</p>
+  <ul class="services-list">
+    <li><strong>Holdings Structuring :</strong> Structuring coherent and efficient holding entities.</li>
+    <li><strong>Wealth & Asset Management :</strong> Strategic guidance for long‑term growth.</li>
+    <li><strong>Investment Structuring :</strong> Dedicated investment vehicles and governance.</li>
+    <li><strong>Venture Capital & Sponsorship :</strong> Strategic funding and partnership support.</li>
+  </ul>
 </section>
 
-<!-- Services Preview -->
-<section class="section">
-  <h2>Our Services</h2>
-  <div class="services-preview">
-    <div class="service-preview">
-      <img src="https://images.unsplash.com/photo-1581090700227-0b56e5c4b1d1?auto=format&fit=crop&w=1200&q=80" alt="Asset Management">
-      <h4>Asset Management</h4>
-      <p>Expert portfolio optimization and risk management solutions tailored to client goals.</p>
-      <a href="services.html" class="btn">Learn More</a>
-    </div>
-    <div class="service-preview">
-      <img src="https://images.unsplash.com/photo-1560448072-1a4fcb60e330?auto=format&fit=crop&w=1200&q=80" alt="Real Estate">
-      <h4>Real Estate</h4>
-      <p>Investments in premium Swiss and European properties for stability and growth.</p>
-      <a href="services.html" class="btn">Learn More</a>
-    </div>
-    <div class="service-preview">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Startups">
-      <h4>Startups</h4>
-      <p>Venture capital support for innovative startups with high-growth potential.</p>
-      <a href="services.html" class="btn">Learn More</a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer>
-  <div>
-    <strong>AKIMBO INVESTISSEMENT SA</strong><br>
-    Capital 100,000 CHF<br>
-    Commercial Register: CH-109-888-462
-  </div>
-  <div>
-    <strong>Services</strong><br>
-    <a href="services.html">Asset Management</a><br>
-    <a href="services.html">Real Estate</a><br>
-    <a href="services.html">Startups & VC</a>
-  </div>
-  <div>
-    <strong>Contact</strong><br>
-    <a href="contact.html">Get in Touch</a>
-  </div>
+  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | RCS CH‑109‑888‑462 | Geneva, Switzerland
 </footer>
 
 </body>
