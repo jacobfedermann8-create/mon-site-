@@ -6,7 +6,7 @@
 <title>Services - AKIMBO INVESTISSEMENT SA</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body, h1, h2, h3, p, a { margin:0; padding:0; }
+  body, h1, h2, h3, p, a { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Lato',sans-serif; background:#f5f5f5; color:#1A1A1A; line-height:1.6; }
 
   /* Header */
@@ -57,7 +57,7 @@
   /* Services Cards Grid */
   .services-cards {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
     margin-top:50px;
   }
@@ -75,7 +75,7 @@
   }
   .card img { width:100%; border-radius:8px; margin-bottom:15px; }
   .card h3 { font-family:'Montserrat',sans-serif; margin-bottom:10px; font-size:20px; color:#111; }
-  .card p { font-size:16px; color:#4a4a4a; }
+  .card p { font-size:16px; color:#4a4a4a; margin-bottom:10px; }
   .btn-card {
     display:inline-block;
     margin-top:12px;
@@ -88,18 +88,13 @@
     transition:0.3s;
     font-size:14px;
   }
-  .btn-card:hover {
-    background:#162b55;
-    transform:translateY(-2px);
-  }
+  .btn-card:hover { background:#162b55; transform:translateY(-2px); }
 
   /* Footer */
   footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
 
   /* Responsive */
-  @media(max-width:768px){
-    .hero h2{font-size:32px;}
-  }
+  @media(max-width:768px){ .hero h2{font-size:32px;} }
 </style>
 </head>
 <body>
@@ -122,14 +117,16 @@
 <!-- Services Section -->
 <section class="section">
   <h2>Investment & Asset Services</h2>
-  <p>Tailored solutions for private and institutional clients with over 20 years of expertise in Swiss financial management.</p>
+  <p>Providing tailored solutions for private and institutional clients with over 20 years of expertise in Swiss financial management.</p>
 
   <div class="services-cards">
     <!-- Asset Management -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1565372914905-f1587b0bfa7d?auto=format&fit=crop&w=800&q=80" alt="Asset Management">
-      <h3>Asset Management</h3>
-      <p>Our expert team crafts bespoke portfolios, focusing on long-term growth, capital preservation, and risk-adjusted performance. We combine traditional and alternative investments to optimize client wealth across multiple markets.</p>
+      <h3>Asset & Wealth Management</h3>
+      <p>We manage private and institutional portfolios with a focus on long-term growth, capital preservation, and risk-adjusted performance.</p>
+      <p>Our services include allocation across equities, bonds, alternative funds, real estate, and startups. Regular reporting ensures transparency and informed decision-making.</p>
+      <p>Example: Managed diversified portfolios for private clients across Switzerland and Europe, combining liquidity and strategic long-term investments.</p>
       <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
@@ -137,7 +134,9 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1560448071-108ba71f60d7?auto=format&fit=crop&w=800&q=80" alt="Real Estate Investments">
       <h3>Real Estate Investments</h3>
-      <p>Over 50 curated Swiss and European properties managed to maximize returns, ensure diversification, and provide stable income. Our portfolio includes luxury apartments, commercial real estate, and strategic land acquisitions.</p>
+      <p>Over 50 Swiss and European properties under active management, including luxury apartments, commercial buildings, and strategic land acquisitions.</p>
+      <p>We provide full-cycle management: acquisition, renovation, leasing, and sale, ensuring maximum ROI and diversification.</p>
+      <p>Example Projects: High-end residential development in Geneva, commercial offices in Zurich, and prime properties in Paris.</p>
       <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
@@ -145,7 +144,9 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Startups & Venture Capital">
       <h3>Startups & Venture Capital</h3>
-      <p>We invest in over 25 high-potential startups, providing capital, strategic guidance, and operational support. Our focus is on disruptive technologies, scalable businesses, and long-term market leaders.</p>
+      <p>Invested in over 25 high-potential startups, focusing on tech, fintech, healthtech, and sustainable solutions.</p>
+      <p>We provide capital, strategic guidance, mentoring, and access to our European network to support rapid growth and scalability.</p>
+      <p>Example: Fintech platform in Switzerland, HealthTech app, green-energy solution provider.</p>
       <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
@@ -153,7 +154,9 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1581090700227-0be95c9461a3?auto=format&fit=crop&w=800&q=80" alt="Sponsorship & Partnerships">
       <h3>Sponsorship & Strategic Partnerships</h3>
-      <p>We create meaningful collaborations to boost client visibility, strategic networking, and market opportunities. Each partnership is designed to align with our client’s investment and brand objectives.</p>
+      <p>We create high-end partnerships and sponsorships to enhance visibility and networking opportunities for clients.</p>
+      <p>Our sponsorships target international events, technology showcases, cultural initiatives, and premium sporting events.</p>
+      <p>Example: International innovation fairs, premium sporting competitions, and cultural events aligned with client objectives.</p>
       <a href="contact.html" class="btn-card">Learn More</a>
     </div>
   </div>
