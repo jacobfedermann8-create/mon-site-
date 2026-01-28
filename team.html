@@ -29,7 +29,7 @@ nav a:hover { color:#555; }
 .hero {
   position: relative;
   height:40vh;
-  background: url('https://images.unsplash.com/photo-1556909192-1d2c77c10cda?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1526481280692-8b42f5fbb4f6?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -62,19 +62,39 @@ nav a:hover { color:#555; }
   margin-top:50px;
 }
 .card {
-  background:#fff;
-  padding:25px;
+  position:relative;
+  background:#000;
   border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-  text-align:center;
+  overflow:hidden;
+  height:350px;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
   transition:0.3s;
 }
-.card:hover { box-shadow:0 15px 30px rgba(0,0,0,0.2); transform:translateY(-5px); }
-.card img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px; }
-.card h3 { font-family:'Montserrat',sans-serif; font-size:20px; color:#111; margin-bottom:5px; }
-.card p { font-size:16px; color:#4a4a4a; margin-bottom:8px; }
-.card a { font-size:14px; color:#1f3d7a; text-decoration:none; transition:0.3s; }
+.card:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.25); }
+.card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0.6;
+  z-index:0;
+}
+.card h3, .card p, .card a { position:relative; z-index:1; margin:2px 0; }
+.card a { color:#ffd700; text-decoration:none; font-weight:700; }
 .card a:hover { text-decoration:underline; }
+
+/* Assign Swiss images for each card using data-bg */
+.card[data-bg="1"]::before { background-image:url('https://images.unsplash.com/photo-1508973378895-7ee118f1f6f8?auto=format&fit=crop&w=800&q=80'); }
+.card[data-bg="2"]::before { background-image:url('https://images.unsplash.com/photo-1587539137175-9d41dbbc26b4?auto=format&fit=crop&w=800&q=80'); }
+.card[data-bg="3"]::before { background-image:url('https://images.unsplash.com/photo-1565070735412-682b1c1b8f32?auto=format&fit=crop&w=800&q=80'); }
+.card[data-bg="4"]::before { background-image:url('https://images.unsplash.com/photo-1600655124378-0da0c9b7d15a?auto=format&fit=crop&w=800&q=80'); }
+.card[data-bg="5"]::before { background-image:url('https://images.unsplash.com/photo-1560059239-13bb37314d33?auto=format&fit=crop&w=800&q=80'); }
 
 /* Footer */
 footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
@@ -104,44 +124,39 @@ footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px s
 <!-- Team Section -->
 <section class="section">
   <h2>Meet Our Experts</h2>
-  <p>Our team of highly skilled professionals ensures the highest standard of service, transparency, and strategic guidance for our clients.</p>
+  <p>Our experienced team ensures top-quality service, strategic guidance, and investment expertise for all our clients.</p>
 
   <div class="team-cards">
     <!-- C.E.O -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Garcia-Quiros Rodriguez">
+    <div class="card" data-bg="1">
       <h3>Garcia-Quiros Rodriguez</h3>
       <p>CEO</p>
       <a href="mailto:Ceo@akimo-investissement.com">Ceo@akimo-investissement.com</a>
     </div>
 
     <!-- Daniel Elisson -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Daniel Elisson">
+    <div class="card" data-bg="2">
       <h3>Daniel Elisson</h3>
       <p>Client Manager</p>
       <a href="mailto:D.elisson@akimo-investissement.com">D.elisson@akimo-investissement.com</a>
     </div>
 
     <!-- Arnault Klaufinstein -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Arnault Klaufinstein">
+    <div class="card" data-bg="3">
       <h3>Arnault Klaufinstein</h3>
       <p>Wealth Manager</p>
       <a href="mailto:A.klaufinstein@akimo-investissement.com">A.klaufinstein@akimo-investissement.com</a>
     </div>
 
     <!-- Simon Mulliez -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Simon Mulliez">
+    <div class="card" data-bg="4">
       <h3>Simon Mulliez</h3>
       <p>Wealth Manager</p>
       <a href="mailto:S.mulliez@akimo-investissement.com">S.mulliez@akimo-investissement.com</a>
     </div>
 
     <!-- David Keller -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="David Keller">
+    <div class="card" data-bg="5">
       <h3>David Keller</h3>
       <p>Real Estate Expert</p>
       <a href="mailto:D.keller@akimo-investissement.com">D.keller@akimo-investissement.com</a>
