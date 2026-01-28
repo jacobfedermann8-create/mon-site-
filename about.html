@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - AKIMBO INVESTISSEMENT SA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body, h1, h2, h3, p, a { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Lato',sans-serif; background:#f5f5f5; color:#1A1A1A; line-height:1.6; }
+
+/* Header */
+header {
+  background:#fff;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header h1 { font-family:'Montserrat',sans-serif; font-size:26px; color:#111; }
+nav a { margin-left:25px; text-decoration:none; color:#111; font-weight:700; transition:0.3s; }
+nav a:hover { color:#555; }
+
+/* Hero */
+.hero {
+  position: relative;
+  height:45vh;
+  background: url('https://images.unsplash.com/photo-1526481280692-8b42f5fbb4f6?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+}
+.hero h2 {
+  position:relative;
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:42px;
+  font-weight:700;
+}
+
+/* Sections */
+.section { padding:80px 20px; max-width:1200px; margin:auto; }
+.section h2 { font-family:'Montserrat',sans-serif; font-size:32px; margin-bottom:20px; color:#111; text-align:center; }
+.section p { font-size:18px; color:#4a4a4a; margin-top:10px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto; }
+
+/* Timeline / History */
+.timeline { display:flex; flex-direction:column; gap:30px; margin-top:40px; }
+.timeline-item { background:#fff; padding:25px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+.timeline-item h3 { font-family:'Montserrat',sans-serif; margin-bottom:10px; font-size:20px; color:#111; }
+.timeline-item p { font-size:16px; color:#4a4a4a; }
+
+/* Expertise Cards */
+.expertise-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:50px; }
+.card { background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:0.3s; text-align:left; }
+.card:hover { box-shadow:0 15px 30px rgba(0,0,0,0.2); transform:translateY(-8px); }
+.card img { width:100%; border-radius:8px; margin-bottom:15px; }
+.card h3 { font-family:'Montserrat',sans-serif; margin-bottom:10px; font-size:20px; color:#111; }
+.card p { font-size:16px; color:#4a4a4a; margin-bottom:10px; }
+.btn-card { display:inline-block; margin-top:12px; padding:10px 20px; background:#1f3d7a; color:#fff; font-weight:700; border-radius:6px; text-decoration:none; transition:0.3s; font-size:14px; }
+.btn-card:hover { background:#162b55; transform:translateY(-2px); }
+
+/* Footer */
+footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
+
+/* Responsive */
+@media(max-width:768px){ .hero h2{font-size:32px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>AKIMBO INVESTISSEMENT SA</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h2>About AKIMBO INVESTISSEMENT SA</h2>
+</section>
+
+<!-- History Section -->
+<section class="section">
+  <h2>Our Story</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Founded in 2003</h3>
+      <p>AKIMBO INVESTISSEMENT SA was founded in Geneva, Switzerland, with the vision to provide exceptional asset management and investment solutions for private and institutional clients.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Expansion & Growth</h3>
+      <p>Over the years, the company expanded across Europe, diversifying its investments in real estate, startups, venture capital, and strategic sponsorships. Today, AKIMBO manages portfolios that include high-end residential and commercial properties, technology startups, and premium sponsorship opportunities.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Expertise & Leadership</h3>
+      <p>With more than 20 years of experience, our team combines deep market knowledge, innovative strategies, and a client-first approach to deliver sustainable growth and capital preservation across multiple asset classes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="section">
+  <h2>Our Mission & Values</h2>
+  <p>Our mission is to provide tailored investment solutions that grow and protect wealth for our clients, maintaining the highest standards of transparency, professionalism, and integrity.</p>
+  <p>Our core values: Excellence, Innovation, Transparency, Client-focus, Sustainability.</p>
+</section>
+
+<!-- Expertise / Services Overview -->
+<section class="section">
+  <h2>Our Expertise</h2>
+  <p>We specialize in Asset & Wealth Management, Real Estate Investments, Startups & Venture Capital, and Strategic Sponsorships. Each service is delivered with precision, professionalism, and long-term vision.</p>
+  <div class="expertise-cards">
+    <!-- Asset Management -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565372914905-f1587b0bfa7d?auto=format&fit=crop&w=800&q=80" alt="Asset Management">
+      <h3>Asset & Wealth Management</h3>
+      <p>Comprehensive portfolio management with allocation across equities, bonds, alternative funds, real estate, and startups.</p>
+      <p>Regular reporting, performance analysis, and strategic advice ensure capital preservation and growth.</p>
+    </div>
+
+    <!-- Real Estate Investments -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560448071-108ba71f60d7?auto=format&fit=crop&w=800&q=80" alt="Real Estate">
+      <h3>Real Estate Investments</h3>
+      <p>Over 50 Swiss and European properties managed, including luxury apartments, offices, and strategic land acquisitions.</p>
+      <p>Projects analyzed for ROI, risk management, and long-term capital appreciation.</p>
+    </div>
+
+    <!-- Startups & Venture Capital -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Startups">
+      <h3>Startups & Venture Capital</h3>
+      <p>Invested in 25+ high-potential startups in fintech, healthtech, green-tech, and tech innovation.</p>
+      <p>Providing capital, mentorship, and network access to help startups scale and succeed.</p>
+    </div>
+
+    <!-- Sponsorship & Partnerships -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581090700227-0be95c9461a3?auto=format&fit=crop&w=800&q=80" alt="Sponsorship">
+      <h3>Sponsorship & Strategic Partnerships</h3>
+      <p>High-end partnerships and sponsorships for global visibility and strategic networking.</p>
+      <p>Includes international innovation fairs, premium sporting events, and cultural initiatives.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH‑109‑888‑462 | Geneva, Switzerland
+</footer>
+
+</body>
+</html>
