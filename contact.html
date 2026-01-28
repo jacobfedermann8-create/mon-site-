@@ -1,35 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Exchange FSL</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - AKIMBO INVESTISSEMENT SA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body, h1, h2, h3, p, a, input, textarea, button { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Lato',sans-serif; background:#f5f5f5; color:#1A1A1A; line-height:1.6; }
+
+  /* Header */
+  header {
+    background:#fff;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
+  header h1 { font-family:'Montserrat',sans-serif; font-size:26px; color:#111; }
+  nav a { margin-left:25px; text-decoration:none; color:#111; font-weight:700; transition:0.3s; }
+  nav a:hover { color:#555; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    height:30vh;
+    background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .hero::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+  }
+  .hero h2 {
+    position:relative;
+    color:#fff;
+    font-family:'Montserrat',sans-serif;
+    font-size:42px;
+    font-weight:700;
+  }
+
+  /* Section */
+  .section { padding:80px 20px; max-width:1200px; margin:auto; }
+  .section h2 { font-family:'Montserrat',sans-serif; font-size:32px; margin-bottom:20px; color:#111; text-align:center; }
+  .section p { font-size:18px; color:#4a4a4a; margin-top:10px; text-align:center; max-width:800px; margin-left:auto; margin-right:auto; }
+
+  /* Contact Form & Map */
+  .contact-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    margin-top:50px;
+    justify-content:center;
+  }
+  .contact-form {
+    flex:1 1 400px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  }
+  .contact-form input, .contact-form textarea {
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:16px;
+    font-family:'Lato',sans-serif;
+  }
+  .contact-form button {
+    background:#1f3d7a;
+    color:#fff;
+    font-weight:700;
+    padding:12px 25px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+  }
+  .contact-form button:hover { background:#162b55; }
+
+  .contact-map {
+    flex:1 1 400px;
+    min-height:400px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  }
+  .contact-map iframe { width:100%; height:100%; border:0; }
+
+  /* Footer */
+  footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
+
+  /* Responsive */
+  @media(max-width:768px){
+    .hero h2{font-size:32px;}
+    .contact-container { flex-direction:column; }
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>Exchange FSL</h1>
+  <h1>AKIMBO INVESTISSEMENT SA</h1>
   <nav>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="team.html">Team</a>
-  <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section>
+<!-- Hero -->
+<section class="hero">
   <h2>Contact Us</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    CFO: Jacob Federmann<br>
-    Email: <a href="mailto:j.federmann@exchange-fsl.com" style="color:#1E3A8A;">j.federmann@exchange-fsl.com</a><br>
-    Website: <a href="https://www.exchange-fsl.com" style="color:#1E3A8A;">https://www.exchange-fsl.com</a>
-  </p>
-  <button onclick="window.location.href='mailto:j.federmann@exchange-fsl.com'">Send Email</button>
 </section>
 
+<!-- Contact Section -->
+<section class="section">
+  <h2>Get in Touch</h2>
+  <p>Feel free to contact us with any questions or inquiries about our investment and asset management services.</p>
+
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form action="mailto:Contact@akimbo-investissement.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.374745065779!2d6.148740576227292!3d46.20439077912139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c650a1c7edc87%3A0x5a0d76169f4b5fa0!2sRue%20du%20Rh%C3%B4ne%2023%2C%201204%20Gen%C3%A8ve%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1706390400000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  © 2026 Exchange FSL. All rights reserved.
+  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH‑109‑888‑462 | Geneva, Switzerland
 </footer>
 
 </body>
