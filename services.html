@@ -6,7 +6,7 @@
 <title>Services - AKIMBO INVESTISSEMENT SA</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body, h1, h2, h3, p, a { margin: 0; padding: 0; }
+  body, h1, h2, h3, p, a { margin:0; padding:0; }
   body { font-family:'Lato',sans-serif; background:#f5f5f5; color:#1A1A1A; line-height:1.6; }
 
   /* Header */
@@ -54,11 +54,10 @@
   .section h2 { font-family:'Montserrat',sans-serif; font-size:32px; margin-bottom:20px; color:#111; text-align:center; }
   .section p { font-size:18px; color:#4a4a4a; margin-top:10px; text-align:center; max-width:800px; margin-left:auto; margin-right:auto; }
 
-  /* Services Cards */
+  /* Services Cards Grid */
   .services-cards {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
     margin-top:50px;
   }
@@ -67,15 +66,32 @@
     padding:30px;
     border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    flex:1 1 280px;
-    max-width:300px;
     transition:0.3s;
     text-align:left;
   }
-  .card:hover { box-shadow:0 12px 28px rgba(0,0,0,0.15); transform:translateY(-5px); }
+  .card:hover {
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    transform:translateY(-8px);
+  }
   .card img { width:100%; border-radius:8px; margin-bottom:15px; }
   .card h3 { font-family:'Montserrat',sans-serif; margin-bottom:10px; font-size:20px; color:#111; }
   .card p { font-size:16px; color:#4a4a4a; }
+  .btn-card {
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 20px;
+    background:#1f3d7a;
+    color:#fff;
+    font-weight:700;
+    border-radius:6px;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:14px;
+  }
+  .btn-card:hover {
+    background:#162b55;
+    transform:translateY(-2px);
+  }
 
   /* Footer */
   footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
@@ -83,7 +99,6 @@
   /* Responsive */
   @media(max-width:768px){
     .hero h2{font-size:32px;}
-    .card { flex:1 1 90%; }
   }
 </style>
 </head>
@@ -107,31 +122,39 @@
 <!-- Services Section -->
 <section class="section">
   <h2>Investment & Asset Services</h2>
-  <p>We provide highly specialized investment solutions tailored for private and institutional clients.</p>
+  <p>Tailored solutions for private and institutional clients with over 20 years of expertise in Swiss financial management.</p>
 
   <div class="services-cards">
+    <!-- Asset Management -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Asset Management">
+      <img src="https://images.unsplash.com/photo-1565372914905-f1587b0bfa7d?auto=format&fit=crop&w=800&q=80" alt="Asset Management">
       <h3>Asset Management</h3>
-      <p>Customized portfolio management with a focus on long-term growth, capital preservation, and risk-adjusted returns.</p>
+      <p>Our expert team crafts bespoke portfolios, focusing on long-term growth, capital preservation, and risk-adjusted performance. We combine traditional and alternative investments to optimize client wealth across multiple markets.</p>
+      <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
+    <!-- Real Estate Investments -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1560264280-5a3aa3c1b5b8?auto=format&fit=crop&w=800&q=80" alt="Real Estate Investments">
+      <img src="https://images.unsplash.com/photo-1560448071-108ba71f60d7?auto=format&fit=crop&w=800&q=80" alt="Real Estate Investments">
       <h3>Real Estate Investments</h3>
-      <p>Over 50 curated Swiss and European properties under management to maximize returns, diversification, and stability.</p>
+      <p>Over 50 curated Swiss and European properties managed to maximize returns, ensure diversification, and provide stable income. Our portfolio includes luxury apartments, commercial real estate, and strategic land acquisitions.</p>
+      <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
+    <!-- Startups & Venture Capital -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80" alt="Startups & Venture Capital">
       <h3>Startups & Venture Capital</h3>
-      <p>Investment in over 25 high-potential startups with strategic guidance, capital support, and growth expertise.</p>
+      <p>We invest in over 25 high-potential startups, providing capital, strategic guidance, and operational support. Our focus is on disruptive technologies, scalable businesses, and long-term market leaders.</p>
+      <a href="contact.html" class="btn-card">Learn More</a>
     </div>
 
+    <!-- Sponsorship & Strategic Partnerships -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1581090700227-0be95c9461a3?auto=format&fit=crop&w=800&q=80" alt="Sponsorship & Partnerships">
-      <h3>Sponsorship & Partnerships</h3>
-      <p>Creating strategic collaborations to enhance visibility, networks, and market opportunities for clients.</p>
+      <h3>Sponsorship & Strategic Partnerships</h3>
+      <p>We create meaningful collaborations to boost client visibility, strategic networking, and market opportunities. Each partnership is designed to align with our client’s investment and brand objectives.</p>
+      <a href="contact.html" class="btn-card">Learn More</a>
     </div>
   </div>
 </section>
