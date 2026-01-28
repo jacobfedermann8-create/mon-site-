@@ -3,34 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Exchange FSL</title>
+  <title>AKIMBO INVESTISSEMENT SA - Services</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(30,58,138,0.9);
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    header nav a:hover {
+      color: #FFD700;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #1E3A8A;
+      margin-bottom: 40px;
+    }
+
+    section p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #E0F2FE;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .service-card img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: #1E3A8A;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #111827;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media(max-width:768px){
+      .service-card img {
+        max-width: 100%;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Exchange FSL</h1>
+  <h1>AKIMBO INVESTISSEMENT SA</h1>
   <nav>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="team.html">Team</a>
-  <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<section>
-  <h2>Our Premium Services</h2>
-  <ul class="services-list">
-    <li>Investment in high-potential projects</li>
-    <li>Strategic financial advisory</li>
-    <li>Project structuring and support</li>
-    <li>Risk assessment and due diligence</li>
-  </ul>
+<!-- HERO -->
+<section style="background: url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; color: white; padding: 120px 20px; position: relative;">
+  <div style="position: relative; z-index:1;">
+    <h2>Our Premium Services</h2>
+    <p>
+      At AKIMBO INVESTISSEMENT SA, we provide a full range of financial services tailored for investors and high-net-worth clients.  
+      From asset management to venture capital investments and strategic sponsorships, our solutions are designed for sustainable growth and long-term success.
+    </p>
+  </div>
 </section>
 
+<!-- Asset Management -->
+<section>
+  <div class="service-card">
+    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=80" alt="Asset Management">
+    <h3>Asset Management</h3>
+    <p>
+      Our asset management services are designed to optimize and grow your financial portfolio.  
+      We analyze market trends, diversify investments, and provide tailored strategies that maximize returns while managing risks.  
+      Our team ensures a transparent approach with continuous monitoring and reporting, helping you achieve your long-term financial goals.
+    </p>
+  </div>
+</section>
+
+<!-- Investment Opportunities -->
+<section>
+  <div class="service-card">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Investments">
+    <h3>Investment Opportunities</h3>
+    <p>
+      We invest in high-potential sectors including real estate, startups, and venture capital projects.  
+      Each investment is carefully evaluated for growth potential and risk management.  
+      Our team identifies opportunities that align with your portfolio and offers detailed strategies to maximize value.  
+      We aim to provide investments with long-term sustainability and strong financial performance.
+    </p>
+  </div>
+</section>
+
+<!-- Sponsorship & Partnerships -->
+<section>
+  <div class="service-card">
+    <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?auto=format&fit=crop&w=1200&q=80" alt="Sponsorship">
+    <h3>Sponsorship & Strategic Partnerships</h3>
+    <p>
+      We support strategic sponsorships and partnerships that align with your brand and investment strategy.  
+      Our goal is to create meaningful collaborations that enhance visibility, strengthen networks, and generate long-term value.  
+      Each partnership is selected with precision, leveraging our expertise and market insights to maximize impact.
+    </p>
+  </div>
+</section>
+
+<!-- Financial Advisory -->
+<section>
+  <div class="service-card">
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=80" alt="Financial Advisory">
+    <h3>Financial Advisory & Project Structuring</h3>
+    <p>
+      Our financial advisory services provide comprehensive guidance on investment strategies, capital allocation, and project structuring.  
+      We help clients plan, execute, and monitor their investments efficiently, ensuring optimal results.  
+      With our expertise, you can navigate complex financial landscapes with confidence and clarity.
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-  © 2026 Exchange FSL. All rights reserved.<br>
-  Email: <a href="mailto:j.federmann@exchange-fsl.com" style="color:#FFD700;">j.federmann@exchange-fsl.com</a>
+  © 2026 AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH-109-888-462
 </footer>
 
 </body>
