@@ -6,7 +6,7 @@
 <title>AKIMBO INVESTISSEMENT SA</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  /* Reset & Font */
+  /* Reset & Fonts */
   body, h1, h2, h3, p, a { margin: 0; padding: 0; }
   body { font-family: 'Lato', sans-serif; color: #1A1A1A; background: #FFFFFF; line-height: 1.6; }
 
@@ -18,6 +18,9 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #E0E0E0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   header h1 { font-family:'Montserrat', sans-serif; font-size: 26px; font-weight:700; color:#111; }
   nav a {
@@ -119,6 +122,12 @@
     font-size: 14px;
     color:#666;
   }
+
+  /* Responsive */
+  @media(max-width:768px){
+    .hero h2 { font-size:36px; }
+    .hero p { font-size:16px; }
+  }
 </style>
 </head>
 <body>
@@ -136,32 +145,34 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-content">
-    <h2>Swiss Investment Excellence & Long‑Term Vision</h2>
-    <p>AKIMBO INVESTISSEMENT SA has been providing tailored investment management, real estate strategies, and financial structuring since 2005.</p>
-    <a href="contact.html" class="btn">Get in Touch</a>
+    <h2>Excellence in Swiss Investment Management</h2>
+    <p>AKIMBO INVESTISSEMENT SA, headquartered in Geneva, has been delivering unparalleled asset management, strategic investment, and wealth structuring solutions for over 20 years. We combine Swiss precision with global vision to protect, grow, and optimize our clients’ portfolios.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
   </div>
 </section>
 
 <!-- About -->
 <section class="section">
-  <h2>About Us</h2>
-  <p>AKIMBO INVESTISSEMENT SA is a Geneva‑based investment management firm with over 20 years of experience structuring holdings, managing portfolios and advising both private and institutional clients with clarity, discretion and strategic insight.</p>
+  <h2>About AKIMBO INVESTISSEMENT SA</h2>
+  <p>Founded in 2005 and based in Geneva, AKIMBO INVESTISSEMENT SA specializes in comprehensive asset management, capital investment, and financial structuring for both private and institutional clients. With over two decades of experience, we provide bespoke strategies that align with our clients’ long-term objectives, ensuring growth, security, and sustainability across all investment classes.</p>
+  <p>Our dedicated team of experts leverages deep market insights, rigorous risk management, and tailored investment solutions to deliver exceptional results. From real estate portfolios and venture capital opportunities to sponsorship and strategic holdings, we help our clients navigate the complexities of global investments with confidence.</p>
 </section>
 
 <!-- Services -->
 <section class="section">
   <h2>Our Core Services</h2>
-  <p>We offer a structured approach to global investment needs:</p>
+  <p>We provide highly specialized services to meet the diverse needs of our clients:</p>
   <ul class="services-list">
-    <li><strong>Holdings Structuring :</strong> Structuring coherent and efficient holding entities.</li>
-    <li><strong>Wealth & Asset Management :</strong> Strategic guidance for long‑term growth.</li>
-    <li><strong>Investment Structuring :</strong> Dedicated investment vehicles and governance.</li>
-    <li><strong>Venture Capital & Sponsorship :</strong> Strategic funding and partnership support.</li>
+    <li><strong>Asset Management:</strong> Tailored portfolio management focused on long-term performance, capital preservation, and risk-adjusted growth.</li>
+    <li><strong>Real Estate Investments:</strong> Curated Swiss and European properties, over 50 assets managed to maximize returns and diversification.</li>
+    <li><strong>Startups & Venture Capital:</strong> Strategic investment in high-potential startups, over 25 ventures supported, offering guidance, capital, and growth expertise.</li>
+    <li><strong>Sponsorship & Strategic Partnerships:</strong> Creating impactful collaborations that enhance visibility, network, and market opportunities for clients.</li>
   </ul>
 </section>
 
+<!-- Footer -->
 <footer>
-  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | RCS CH‑109‑888‑462 | Geneva, Switzerland
+  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH‑109‑888‑462 | Geneva, Switzerland
 </footer>
 
 </body>
