@@ -37,41 +37,92 @@
     }
     header nav a:hover { color:#FFD700; }
 
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin:auto;
-      text-align:center;
-    }
+    section { padding:80px 20px; max-width:1000px; margin:auto; text-align:center; }
     section h2 { color:#1E3A8A; margin-bottom:40px; }
     section p { max-width:850px; margin:auto; font-size:18px; line-height:1.8; }
 
+    /* Parallax Hero */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color:white;
+      padding:120px 20px;
+      position:relative;
+      background-attachment: fixed;
+    }
+    .hero h2 { font-size:48px; margin-bottom:20px; }
+    .hero p { font-size:20px; max-width:750px; margin:auto; line-height:1.8; }
+
+    /* Service Card */
     .service-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       background-color: #E0F2FE;
       border-radius: 12px;
-      padding: 25px;
-      margin: 20px 0;
+      padding:25px;
+      margin:20px 0;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align:left;
       transition:0.3s;
     }
     .service-card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-    .service-card img { width:100%; max-width:600px; border-radius:12px; margin-bottom:20px; }
-    .service-card h3 { color:#1E3A8A; margin-bottom:15px; }
-    .service-card p { text-align:left; }
 
-    footer {
-      background-color:#111827;
-      color:white;
-      padding:25px;
-      text-align:center;
-      font-size:14px;
+    .service-card img {
+      width:100%;
+      border-radius:12px;
+      margin-bottom:20px;
     }
 
+    .service-card h3 { color:#1E3A8A; margin-bottom:10px; }
+    .service-card p { margin-bottom:10px; }
+
+    /* Accordion */
+    .accordion {
+      background-color:#fff;
+      color:#1E3A8A;
+      cursor:pointer;
+      padding:18px;
+      width:100%;
+      border:none;
+      text-align:left;
+      outline:none;
+      font-size:18px;
+      transition:0.4s;
+      border-radius:8px;
+      margin-bottom:10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .active, .accordion:hover { background-color:#D1E8FF; }
+    .panel {
+      padding: 0 18px;
+      display:none;
+      background-color: #F0F8FF;
+      overflow:hidden;
+      border-radius:0 0 8px 8px;
+      margin-bottom:20px;
+    }
+    .panel p { text-align:left; }
+
+    /* Stats */
+    .stats { display:flex; justify-content:space-around; flex-wrap:wrap; margin-top:30px; }
+    .stat { background:#fff; padding:20px; margin:10px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:180px; }
+    .stat h3 { margin:0; color:#1E3A8A; font-size:22px; }
+    .stat p { margin:5px 0 0 0; font-size:16px; }
+
+    /* Buttons */
+    .btn { display:inline-block; padding:12px 25px; background-color:#FFD700; color:#1E3A8A; font-weight:bold; border-radius:8px; text-decoration:none; margin-top:10px; transition:0.3s; }
+    .btn:hover { background-color:#FFA500; }
+
+    /* Contact mini form */
+    .mini-form { background:#E0F2FE; padding:30px; border-radius:12px; margin-top:50px; text-align:center; }
+    .mini-form input[type=email] { padding:12px; width:250px; border-radius:8px; border:1px solid #ccc; margin-right:10px; }
+    .mini-form button { padding:12px 20px; border:none; border-radius:8px; background:#1E3A8A; color:white; cursor:pointer; transition:0.3s; }
+    .mini-form button:hover { background:#15306b; }
+
+    footer { background-color:#111827; color:white; padding:25px; text-align:center; font-size:14px; }
+
     @media(max-width:768px){
-      .service-card img { max-width:100%; }
+      .stats { flex-direction:column; align-items:center; }
+      .stat { width:70%; }
+      .hero h2 { font-size:36px; }
+      .hero p { font-size:16px; }
     }
   </style>
 </head>
@@ -88,14 +139,9 @@
 </header>
 
 <!-- HERO -->
-<section style="background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; color:white; padding:120px 20px; position:relative;">
-  <div style="position:relative; z-index:1;">
-    <h2>Our Premium Investment Services</h2>
-    <p>
-      At AKIMBO INVESTISSEMENT SA, we provide tailored investment solutions to maximize growth and security.  
-      Explore our areas of expertise to understand where we invest and how we create value for our clients.
-    </p>
-  </div>
+<section class="hero">
+  <h2>Our Premium Investment Services</h2>
+  <p>Discover where we invest and how AKIMBO INVESTISSEMENT SA creates sustainable value and growth for our clients.</p>
 </section>
 
 <!-- Asset Management -->
@@ -103,69 +149,87 @@
   <div class="service-card">
     <img src="https://images.unsplash.com/photo-1581090700227-0b56e5c4b1d1?auto=format&fit=crop&w=1200&q=80" alt="Asset Management">
     <h3>Asset Management</h3>
-    <p>
-      Our asset management services are designed to optimize and protect your financial portfolio.  
-      We develop tailored investment strategies, diversifying across markets, sectors, and geographies.  
-      Our approach combines Swiss precision, expert analysis, and continuous monitoring to maximize long-term returns while managing risks effectively.
-    </p>
+    <button class="accordion">Learn More</button>
+    <div class="panel">
+      <p>We optimize and protect portfolios through diversification and Swiss precision. Continuous monitoring, risk management, and personalized strategies ensure long-term growth.</p>
+      <div class="stats">
+        <div class="stat"><h3>50+</h3><p>Clients Managed</p></div>
+        <div class="stat"><h3>20M CHF</h3><p>Assets Under Management</p></div>
+      </div>
+      <a href="contact.html" class="btn">Request a Meeting</a>
+    </div>
   </div>
 </section>
 
-<!-- Real Estate Investments -->
+<!-- Real Estate -->
 <section>
   <div class="service-card">
-    <img src="https://images.unsplash.com/photo-1564501049419-fd05422833f8?auto=format&fit=crop&w=1200&q=80" alt="Real Estate Investment">
+    <img src="https://images.unsplash.com/photo-1564501049419-fd05422833f8?auto=format&fit=crop&w=1200&q=80" alt="Real Estate">
     <h3>Real Estate Investments</h3>
-    <p>
-      We invest in high-quality real estate assets in Switzerland and selected international markets.  
-      Our focus includes commercial, residential, and luxury properties that offer stable returns and capital appreciation.  
-      Each project is evaluated for location, potential growth, and risk mitigation, ensuring long-term value for our investors.
-    </p>
+    <button class="accordion">Learn More</button>
+    <div class="panel">
+      <p>We invest in high-quality commercial and residential real estate in Switzerland and selected international markets. Focus on stable returns, location, and capital appreciation.</p>
+      <div class="stats">
+        <div class="stat"><h3>12</h3><p>Properties Managed</p></div>
+        <div class="stat"><h3>+5%</h3><p>Annual Yield Avg.</p></div>
+      </div>
+      <a href="contact.html" class="btn">Request a Proposal</a>
+    </div>
   </div>
 </section>
 
-<!-- Startup & Venture Capital -->
+<!-- Startups -->
 <section>
   <div class="service-card">
-    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" alt="Startup Investments">
+    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80" alt="Startup">
     <h3>Startup & Venture Capital</h3>
-    <p>
-      We actively support innovative startups and venture capital projects with high growth potential.  
-      Our investment strategy targets technology, fintech, healthtech, and other emerging industries.  
-      We provide not only capital but also strategic guidance, networking, and mentorship to accelerate growth and maximize investor returns.
-    </p>
+    <button class="accordion">Learn More</button>
+    <div class="panel">
+      <p>We invest in innovative startups in tech, fintech, and healthtech. Our support includes capital, strategic guidance, and mentorship to accelerate growth and maximize returns.</p>
+      <div class="stats">
+        <div class="stat"><h3>10+</h3><p>Startups Funded</p></div>
+        <div class="stat"><h3>18%</h3><p>Avg ROI</p></div>
+      </div>
+      <a href="contact.html" class="btn">Contact for Investment</a>
+    </div>
   </div>
 </section>
 
-<!-- Sponsorship & Partnerships -->
+<!-- Sponsorship -->
 <section>
   <div class="service-card">
     <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?auto=format&fit=crop&w=1200&q=80" alt="Sponsorship">
-    <h3>Sponsorship & Strategic Partnerships</h3>
-    <p>
-      We offer sponsorships and strategic partnerships that create long-term value and visibility for our clients.  
-      Collaborating with selected businesses and events, we maximize brand impact and strengthen market positioning.  
-      Each partnership is carefully chosen to align with our clients’ objectives and investment strategy.
-    </p>
+    <h3>Sponsorship & Partnerships</h3>
+    <button class="accordion">Learn More</button>
+    <div class="panel">
+      <p>Strategic sponsorships and partnerships creating long-term value. Careful selection ensures alignment with clients’ objectives and investment strategy.</p>
+      <a href="contact.html" class="btn">Request Partnership</a>
+    </div>
   </div>
 </section>
 
-<!-- Financial Advisory -->
-<section>
-  <div class="service-card">
-    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=80" alt="Financial Advisory">
-    <h3>Financial Advisory & Project Structuring</h3>
-    <p>
-      Our financial advisory services provide end-to-end support for capital allocation, project structuring, and investment strategy.  
-      We help clients navigate complex financial landscapes with expert insights, risk analysis, and strategic planning.  
-      Our goal is to ensure optimal execution, maximize returns, and secure sustainable growth.
-    </p>
-  </div>
+<!-- Mini Contact Form -->
+<section class="mini-form">
+  <h2>Interested in Our Services?</h2>
+  <p>Enter your email and we will contact you to discuss investment opportunities.</p>
+  <input type="email" placeholder="Your Email">
+  <button>Submit</button>
 </section>
 
 <footer>
   © 2026 AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH-109-888-462
 </footer>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  for(var i=0;i<acc.length;i++){
+    acc[i].addEventListener("click", function(){
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  }
+</script>
 
 </body>
 </html>
