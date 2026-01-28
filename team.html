@@ -1,47 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team - Exchange FSL</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Styles spécifiques pour la page Team */
-    .team-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-    .team-member {
-      background-color: #E0F2FE;
-      padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .team-member:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
-    }
-    .team-member img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    .team-member h3 {
-      margin: 10px 0 5px 0;
-      color: #1E3A8A;
-    }
-    .team-member p {
-      font-size: 14px;
-      color: #111827;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team - AKIMBO INVESTISSEMENT SA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body, h1, h2, h3, p, a { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Lato',sans-serif; background:#f5f5f5; color:#1A1A1A; line-height:1.6; }
+
+/* Header */
+header {
+  background:#fff;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header h1 { font-family:'Montserrat',sans-serif; font-size:26px; color:#111; }
+nav a { margin-left:25px; text-decoration:none; color:#111; font-weight:700; transition:0.3s; }
+nav a:hover { color:#555; }
+
+/* Hero */
+.hero {
+  position: relative;
+  height:40vh;
+  background: url('https://images.unsplash.com/photo-1556909192-1d2c77c10cda?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+}
+.hero h2 {
+  position:relative;
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:42px;
+  font-weight:700;
+}
+
+/* Team Section */
+.section { padding:80px 20px; max-width:1200px; margin:auto; }
+.section h2 { font-family:'Montserrat',sans-serif; font-size:32px; margin-bottom:20px; color:#111; text-align:center; }
+.section p { font-size:18px; color:#4a4a4a; margin-top:10px; text-align:center; max-width:900px; margin-left:auto; margin-right:auto; }
+
+/* Team Cards */
+.team-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.card {
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+.card:hover { box-shadow:0 15px 30px rgba(0,0,0,0.2); transform:translateY(-5px); }
+.card img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px; }
+.card h3 { font-family:'Montserrat',sans-serif; font-size:20px; color:#111; margin-bottom:5px; }
+.card p { font-size:16px; color:#4a4a4a; margin-bottom:8px; }
+.card a { font-size:14px; color:#1f3d7a; text-decoration:none; transition:0.3s; }
+.card a:hover { text-decoration:underline; }
+
+/* Footer */
+footer { background:#fff; text-align:center; padding:30px 20px; border-top:1px solid #ddd; color:#666; font-size:14px; }
+
+/* Responsive */
+@media(max-width:768px){ .hero h2{font-size:32px;} }
+</style>
 </head>
 <body>
 
@@ -52,35 +92,66 @@
     <a href="services.html">Services</a>
     <a href="team.html">Team</a>
     <a href="contact.html">Contact</a>
-    <a href="about.html">About Us</a> <!-- <-- ici tu mets le lien vers About Us -->
+    <a href="about.html">About Us</a>
   </nav>
 </header>
 
-<section>
+<!-- Hero -->
+<section class="hero">
   <h2>Our Team</h2>
-  <div class="team-container">
-    <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Jacob Federmann">
-      <h3>Jacob Federmann</h3>
-      <p>CFO & Founder</p>
+</section>
+
+<!-- Team Section -->
+<section class="section">
+  <h2>Meet Our Experts</h2>
+  <p>Our team of highly skilled professionals ensures the highest standard of service, transparency, and strategic guidance for our clients.</p>
+
+  <div class="team-cards">
+    <!-- C.E.O -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Garcia-Quiros Rodriguez">
+      <h3>Garcia-Quiros Rodriguez</h3>
+      <p>CEO</p>
+      <a href="mailto:Ceo@akimo-investissement.com">Ceo@akimo-investissement.com</a>
     </div>
-    <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Team Member 2">
-      <h3>Jane Doe</h3>
-      <p>Financial Advisor</p>
+
+    <!-- Daniel Elisson -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Daniel Elisson">
+      <h3>Daniel Elisson</h3>
+      <p>Client Manager</p>
+      <a href="mailto:D.elisson@akimo-investissement.com">D.elisson@akimo-investissement.com</a>
     </div>
-    <div class="team-member">
-      <img src="https://via.placeholder.com/100" alt="Team Member 3">
-      <h3>John Smith</h3>
-      <p>Investment Analyst</p>
+
+    <!-- Arnault Klaufinstein -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Arnault Klaufinstein">
+      <h3>Arnault Klaufinstein</h3>
+      <p>Wealth Manager</p>
+      <a href="mailto:A.klaufinstein@akimo-investissement.com">A.klaufinstein@akimo-investissement.com</a>
     </div>
-    <!-- Ajoute d'autres membres ici -->
+
+    <!-- Simon Mulliez -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Simon Mulliez">
+      <h3>Simon Mulliez</h3>
+      <p>Wealth Manager</p>
+      <a href="mailto:S.mulliez@akimo-investissement.com">S.mulliez@akimo-investissement.com</a>
+    </div>
+
+    <!-- David Keller -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="David Keller">
+      <h3>David Keller</h3>
+      <p>Real Estate Expert</p>
+      <a href="mailto:D.keller@akimo-investissement.com">D.keller@akimo-investissement.com</a>
+    </div>
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  © 2026 Exchange FSL. All rights reserved.<br>
-  Email: <a href="mailto:j.federmann@exchange-fsl.com" style="color:#FFD700;">j.federmann@exchange-fsl.com</a>
+  AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH‑109‑888‑462 | Geneva, Switzerland
 </footer>
 
 </body>
