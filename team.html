@@ -1,112 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team | AKIMBO INVESTISSEMENT SA</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<style>
-  /* Reset & Fonts */
-  body, h1, h2, h3, p, a { margin: 0; padding: 0; }
-  body { font-family: 'Lato', sans-serif; background: #f5f5f5; color:#1A1A1A; line-height:1.6; }
+  <title>Our Team | AKIMBO Investment SA</title>
+  <meta name="description" content="Meet the leadership and investment team of AKIMBO Investment SA, an independent Swiss investment firm specializing in asset management, real estate, and private equity."/>
 
-  /* Header */
-  header {
-    background: #fff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header h1 { font-family:'Montserrat',sans-serif; font-size:26px; color:#111; }
-  nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #111;
-    font-weight:700;
-    transition:0.3s;
-  }
-  nav a:hover { color:#555; }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-  /* Hero */
-  .hero {
-    position: relative;
-    height: 60vh;
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1471&q=80') center/cover no-repeat;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-  }
-  .hero::after {
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.3);
-  }
-  .hero-content {
-    position: relative;
-    color: #fff;
-    max-width:900px;
-  }
-  .hero h2 { font-family:'Montserrat',sans-serif; font-size:48px; margin-bottom:20px; line-height:1.2; }
-  .hero p { font-size:20px; margin-bottom:30px; }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* Section Base */
-  .section { padding:80px 20px; max-width:1200px; margin:auto; }
-  .section h2 { font-family:'Montserrat',sans-serif; font-size:32px; margin-bottom:50px; color:#111; text-align:center; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #0e0f12;
+      color: #e6e6e6;
+      line-height: 1.75;
+    }
 
-  /* Team Cards */
-  .team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  .card {
-    background:#fff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    flex:1 1 250px;
-    max-width:300px;
-    text-align:center;
-    transition:0.3s;
-  }
-  .card:hover { box-shadow:0 12px 28px rgba(0,0,0,0.15); transform:translateY(-5px); }
-  .card h3 { font-family:'Montserrat',sans-serif; margin-bottom:10px; font-size:20px; color:#111; }
-  .role { font-size:14px; color:#1f3d7a; margin-bottom:15px; font-weight:700; }
-  .card p { font-size:16px; color:#4a4a4a; line-height:1.6; margin-bottom:10px; }
-  .card a { color:#1f3d7a; font-weight:700; font-size:14px; text-decoration:none; }
+    a { text-decoration: none; color: inherit; }
 
-  /* Footer */
-  footer {
-    background:#fff;
-    text-align:center;
-    padding:30px 20px;
-    border-top:1px solid #ddd;
-    color:#666;
-    font-size:14px;
-  }
+    /* HEADER */
+    header {
+      background: rgba(14,15,18,0.95);
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
 
-  /* Responsive */
-  @media(max-width:768px){
-    .hero h2{font-size:36px;}
-    .hero p{font-size:16px;}
-    .team-grid{flex-direction:column; align-items:center;}
-  }
-</style>
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      font-weight: 600;
+      color: #cfcfcf;
+    }
+
+    nav a:hover { color: #ffffff; }
+
+    /* HERO */
+    .hero {
+      min-height: 55vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url("https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 46px;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d4d4d4;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 110px 10%;
+    }
+
+    section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    section > p {
+      max-width: 960px;
+      margin: 0 auto 40px;
+      font-size: 17.5px;
+      color: #cfcfcf;
+      text-align: center;
+    }
+
+    /* TEAM GRID */
+    .team-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .team-card {
+      background: #181a20;
+      padding: 35px 40px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .team-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .team-card span {
+      display: block;
+      font-size: 14px;
+      color: #9fa3aa;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-card p {
+      font-size: 15.5px;
+      color: #cfcfcf;
+      margin-bottom: 10px;
+    }
+
+    .team-card a {
+      font-size: 14px;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+
+    .team-card a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b0c10;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header { padding: 20px; }
+      .hero h2 { font-size: 34px; }
+      section { padding: 80px 6%; }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <h1>AKIMBO INVESTISSEMENT SA</h1>
+  <h1>AKIMBO INVESTMENT SA</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -118,63 +176,71 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h2>Our Leadership & Advisory Team</h2>
-    <p>Our multidisciplinary team combines financial expertise, international investment strategy, and long-term asset management excellence.</p>
+    <h2>Our Team</h2>
+    <p>
+      A multidisciplinary team combining investment expertise,
+      strategic vision, and long-term experience.
+    </p>
   </div>
 </section>
 
-<section class="section">
-<h2>Meet Our Team</h2>
+<section>
+  <h3>Leadership & Investment Team</h3>
+  <p>
+    AKIMBO Investment SA is led by professionals with extensive experience
+    in asset management, real estate, private equity, and strategic investments.
+  </p>
 
-<div class="team-grid">
+  <div class="team-grid">
 
-<div class="card">
-<h3>Garcia-Quiros Rodriguez</h3>
-<div class="role">Chief Executive Officer (CEO)</div>
-<p>Strategic leadership, investment direction and international partnerships.</p>
-<a href="mailto:Ceo@akimbo-investissement.com">Ceo@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>Garcia-Quiros Rodriguez</h4>
+      <span>Chief Executive Officer (CEO)</span>
+      <p>Responsible for strategic direction, investment decisions, and long-term vision.</p>
+      <a href="mailto:ceo@akimbo-investment.com">ceo@akimbo-investment.com</a>
+    </div>
 
-<div class="card">
-<h3>Remi Rosen</h3>
-<div class="role">Chief Financial Officer (CFO)</div>
-<p>Financial governance, structuring, risk management and performance control.</p>
-<a href="mailto:R.rosen@akimbo-investissement.com">R.rosen@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>Remi Rosen</h4>
+      <span>Chief Financial Officer (CFO)</span>
+      <p>Oversees financial strategy, structuring, and financial governance.</p>
+      <a href="mailto:r.rosen@akimbo-investment.com">r.rosen@akimbo-investment.com</a>
+    </div>
 
-<div class="card">
-<h3>Daniel Elisson</h3>
-<div class="role">Client Relationship Manager</div>
-<p>Client advisory, portfolio monitoring and relationship management.</p>
-<a href="mailto:D.elisson@akimbo-investissement.com">D.elisson@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>Daniel Elisson</h4>
+      <span>Client Relationship Manager</span>
+      <p>Manages client relationships and investment coordination.</p>
+      <a href="mailto:d.elisson@akimbo-investment.com">d.elisson@akimbo-investment.com</a>
+    </div>
 
-<div class="card">
-<h3>Arnault Klaufinstein</h3>
-<div class="role">Wealth Manager</div>
-<p>Structured investments and long-term wealth strategies.</p>
-<a href="mailto:A.klaufinstein@akimbo-investissement.com">A.klaufinstein@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>Arnault Klaufinstein</h4>
+      <span>Wealth Manager</span>
+      <p>Specialized in wealth structuring and long-term portfolio strategies.</p>
+      <a href="mailto:a.klaufinstein@akimbo-investment.com">a.klaufinstein@akimbo-investment.com</a>
+    </div>
 
-<div class="card">
-<h3>Simon Mulliez</h3>
-<div class="role">Wealth Manager</div>
-<p>Portfolio optimization and alternative investment strategies.</p>
-<a href="mailto:S.mulliez@akimbo-investissement.com">S.mulliez@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>Simon Mulliez</h4>
+      <span>Wealth Manager</span>
+      <p>Focused on portfolio management and investment optimization.</p>
+      <a href="mailto:s.mulliez@akimbo-investment.com">s.mulliez@akimbo-investment.com</a>
+    </div>
 
-<div class="card">
-<h3>David Keller</h3>
-<div class="role">Real Estate Investment Expert</div>
-<p>European real estate acquisitions and asset development.</p>
-<a href="mailto:D.keller@akimbo-investissement.com">D.keller@akimbo-investissement.com</a>
-</div>
+    <div class="team-card">
+      <h4>David Keller</h4>
+      <span>Real Estate Expert</span>
+      <p>Advises on real estate investments, asset valuation, and project structuring.</p>
+      <a href="mailto:d.keller@akimbo-investment.com">d.keller@akimbo-investment.com</a>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <footer>
-AKIMBO INVESTISSEMENT SA | Capital 100,000 CHF | Commercial Register: CH‑109‑888‑462 | Geneva, Switzerland
+  © 2026 AKIMBO Investment SA — Switzerland<br>
+  Registered Capital: CHF 100,000 — Commercial Register: CH-109-888-462
 </footer>
 
 </body>
